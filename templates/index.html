@@ -1,0 +1,23 @@
+
+{% extends 'base.html'%}
+{% block content %}
+        <div class="row">
+          {% include 'includes/messages.html' %}
+            {% for i in tut %}
+            <div class="col s12 m6 l4">
+              <div class="card #757575 grey darken-1">
+                <div class="card-content black-text">
+                  <span class="card-title"><p><b>{{i.tutorial_title}}</b></p></span>
+                  <p>{{i.tutorial_published}}</p>
+                  <p>{{i.tutorial_content}}</p>
+                </div>
+                <div class="card-action">
+                  <a href="#">visit</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+        </div>
+        <br>
+{% endblock %}        
+        
